@@ -204,6 +204,7 @@ export default ({ service, request, serviceForMock, requestForMock, mock, faker,
     async getTableData () {
       try {
         const res = await this.$api.DEMO_FETCH()
+        // 这个res是响应的data部分，而不是全部，如需获取全部需要修改service.js的32行return dataAxios.data为return dataAxios
         console.log(res)
       } catch (error) {
         console.log(error)
